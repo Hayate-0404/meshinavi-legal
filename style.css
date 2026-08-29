@@ -1,0 +1,73 @@
+/* メシナビの規約類ページ共通スタイル。GitHub Pages で配信する。 */
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6b6b70;
+  --line: #e2e2e6;
+  --accent: #d63b3b;
+  --card: #f7f7f8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --fg: #ececee;
+    --muted: #9a9aa0;
+    --line: #303034;
+    --accent: #ff6b6b;
+    --card: #1b1b1e;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { border-bottom: 1px solid var(--line); padding: 40px 0 20px; margin-bottom: 32px; }
+h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: 0.02em; }
+h2 {
+  font-size: 18px;
+  margin: 40px 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+h2:first-of-type { border-top: 0; padding-top: 0; }
+h3 { font-size: 16px; margin: 24px 0 8px; }
+p, li { font-size: 15px; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 6px 0; }
+.meta { color: var(--muted); font-size: 13px; margin: 0; }
+.lead { color: var(--muted); font-size: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: var(--card); font-weight: 600; }
+.scroll { overflow-x: auto; }
+.note {
+  background: var(--card);
+  border-left: 3px solid var(--accent);
+  padding: 14px 16px;
+  margin: 20px 0;
+  font-size: 14px;
+  border-radius: 0 6px 6px 0;
+}
+a { color: var(--accent); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.todo {
+  background: #fff4e5;
+  color: #7a4b00;
+  border: 1px dashed #d99a2b;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 20px 0;
+}
+@media (prefers-color-scheme: dark) {
+  .todo { background: #2e2412; color: #f0c479; border-color: #7a5a1e; }
+}
