@@ -6,8 +6,18 @@
 <title>メシナビ</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-title-ja="メシナビ" data-title-en="Meshinavi">
 <main>
+
+<div class="lang-switch">
+  <div class="lang-toggle" role="group" aria-label="Language / 言語">
+    <button type="button" data-lang="ja" aria-pressed="true">JP</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<!-- ===================== 日本語 ===================== -->
+<div class="lang-block" data-lang="ja">
 <header>
   <h1>メシナビ</h1>
   <p class="meta">冷蔵庫の食材から、今日の献立を。</p>
@@ -22,6 +32,27 @@
   <p>提供者：Kosugi Hayate<br>
   お問い合わせ：<a href="mailto:meshinavi.support@gmail.com">meshinavi.support@gmail.com</a></p>
 </footer>
+</div>
+
+<!-- ===================== English ===================== -->
+<div class="lang-block" data-lang="en">
+<header>
+  <h1>Meshinavi</h1>
+  <p class="meta">Tonight&rsquo;s meal, from what&rsquo;s in your fridge.</p>
+</header>
+<h2>Legal</h2>
+<ul>
+  <li><a href="terms.html">Terms of Service</a></li>
+  <li><a href="privacy.html">Privacy Policy</a></li>
+  <li><a href="tokushoho.html">Notice under the Specified Commercial Transactions Act (Japanese)</a></li>
+</ul>
+<footer>
+  <p>Provider: Kosugi Hayate<br>
+  Contact: <a href="mailto:meshinavi.support@gmail.com">meshinavi.support@gmail.com</a></p>
+</footer>
+</div>
+
 </main>
+<script src="lang.js"></script>
 </body>
 </html>

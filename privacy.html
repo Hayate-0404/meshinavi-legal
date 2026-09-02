@@ -6,8 +6,19 @@
 <title>プライバシーポリシー | メシナビ</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-title-ja="プライバシーポリシー | メシナビ" data-title-en="Privacy Policy | Meshinavi">
 <main>
+
+<div class="lang-switch">
+  <div class="lang-toggle" role="group" aria-label="Language / 言語">
+    <button type="button" data-lang="ja" aria-pressed="true">JP</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<!-- ===================== 日本語 ===================== -->
+<div class="lang-block" data-lang="ja">
+
 <header>
   <h1>メシナビ プライバシーポリシー</h1>
   <p class="meta">制定日：2026年8月30日</p>
@@ -125,6 +136,135 @@
   <p>お問い合わせ：<a href="mailto:meshinavi.support@gmail.com">meshinavi.support@gmail.com</a><br>
   <a href="terms.html">利用規約</a> ・ <a href="tokushoho.html">特定商取引法に基づく表記</a> ・ <a href="index.html">トップ</a></p>
 </footer>
+
+</div>
+
+<!-- ===================== English ===================== -->
+<div class="lang-block" data-lang="en">
+
+<header>
+  <h1>Meshinavi Privacy Policy</h1>
+  <p class="meta">Effective date: August 30, 2026</p>
+</header>
+
+<p class="translation-note">This English text is a reference translation provided for convenience. If it differs from the Japanese version, <a href="privacy.html?lang=ja">the Japanese version</a> prevails.</p>
+
+<p class="lead">Kosugi Hayate (&ldquo;we&rdquo; or &ldquo;us&rdquo;) sets out below how user information is handled in Meshinavi (the &ldquo;App&rdquo;).</p>
+
+
+<h2>1. Information we collect</h2>
+<div class="scroll">
+<table>
+  <tr><th>Information</th><th>When it is collected</th><th>Purpose of use</th></tr>
+  <tr>
+    <td>Email address, Apple Account / Google account identifier, account ID</td>
+    <td>When you register an account</td>
+    <td>Verifying identity; restoring data when you change devices</td>
+  </tr>
+  <tr>
+    <td>Nickname, the answers you give during initial setup (food preferences and the like), the items and recipes you register</td>
+    <td>While using the App</td>
+    <td>Providing features; carrying your data over when you change devices</td>
+  </tr>
+  <tr>
+    <td>Photos of ingredients and dishes</td>
+    <td>When you use CookEye (AI analysis)</td>
+    <td>AI meal suggestions (see section 3 for details)</td>
+  </tr>
+  <tr>
+    <td>CookEye usage counts, records of advertisements viewed</td>
+    <td>When you use CookEye and advertisements</td>
+    <td>Managing usage counts per plan; preventing abuse</td>
+  </tr>
+  <tr>
+    <td>Push notification token, OS version, app version, device type</td>
+    <td>If you allow notifications</td>
+    <td>Delivering announcements</td>
+  </tr>
+  <tr>
+    <td>Advertising identifier (IDFA), approximate location, history of advertisement impressions and interactions</td>
+    <td>When advertisements are displayed</td>
+    <td>Delivering and measuring advertisements (see section 4 for details)</td>
+  </tr>
+  <tr>
+    <td>Purchase and subscription status</td>
+    <td>When you purchase the Pro Plan</td>
+    <td>Managing and restoring billing status</td>
+  </tr>
+</table>
+</div>
+
+<div class="note">
+  <strong>Information stored only on your device, which we do not collect</strong><br>
+  Photos attached to meal records and the Home screen background image are stored only on your own device. They are never sent to or stored in the cloud (except where used for CookEye analysis; see section 3).
+</div>
+
+<h2>2. Where information is stored</h2>
+<p>The information we collect is stored in Firebase (Authentication / Cloud Firestore / Cloud Functions / Cloud Messaging), provided by Google LLC. The data storage region is Japan (Tokyo).</p>
+
+<h2>3. How images are handled in CookEye (AI analysis)</h2>
+<p>Because this is the central feature of the App, we explain it in particular detail.</p>
+<ol>
+  <li>Photos taken by the user are sent through our server (Cloud Functions) to <strong>Google LLC&rsquo;s generative AI service (the Gemini API).</strong></li>
+  <li><strong>We do not store the images that are sent.</strong> Images are discarded from the server once the analysis is complete.</li>
+  <li>What is recorded on the server is <strong>only the item name and quantity</strong> recognized as the analysis result (because they are needed to produce further suggestions with &ldquo;Other ideas&rdquo;). This record is <strong>deleted automatically after 24 hours</strong>.</li>
+  <li>Google&rsquo;s handling of images follows its
+    <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a>. We use the paid tier of the API, and the data sent is not used to improve or train Google&rsquo;s generative AI models.</li>
+  <li>Please refrain from sending images in which other people&rsquo;s faces, or information that could identify an individual, appear.</li>
+</ol>
+
+<h2>4. Advertising</h2>
+<ol>
+  <li>The App displays advertisements through Google AdMob when it is used free of charge. No advertisements are shown while a Pro Plan subscription is active.</li>
+  <li>For the purpose of delivering advertisements, Google and advertising providers may collect your device&rsquo;s advertising identifier (IDFA), approximate location, and similar information.</li>
+  <li>If you choose <strong>&ldquo;Ask App Not to Track&rdquo; in the iOS tracking permission dialog, the IDFA is not collected</strong> and advertisements will not be personalized. You can change this setting at any time from Settings &rarr; Privacy &amp; Security &rarr; Tracking on iOS.</li>
+  <li>For Google&rsquo;s handling of advertising data, please see
+    <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>.</li>
+</ol>
+
+<h2>5. Provision to third parties</h2>
+<p>We do not provide the information we collect to third parties, except in the following cases:</p>
+<ul>
+  <li>Where the user has consented</li>
+  <li>Where required by laws and regulations</li>
+  <li>Where we entrust the handling of information to the following providers, to the extent necessary to provide the App</li>
+</ul>
+<div class="scroll">
+<table>
+  <tr><th>Provider</th><th>Information provided</th><th>Purpose</th></tr>
+  <tr><td>Google LLC (Firebase)</td><td>Account information, profile, usage counts, notification tokens</td><td>Authentication, data storage, notification delivery</td></tr>
+  <tr><td>Google LLC (Gemini API)</td><td>Images used for CookEye</td><td>AI analysis</td></tr>
+  <tr><td>Google LLC (AdMob)</td><td>Advertising identifier and similar information</td><td>Delivering and measuring advertisements</td></tr>
+  <tr><td>RevenueCat, Inc.</td><td>Purchase information, account ID</td><td>Managing subscription status</td></tr>
+  <tr><td>Apple Inc.</td><td>Purchase information</td><td>Processing in-app purchases</td></tr>
+</table>
+</div>
+
+<h2>6. Retention period and deletion</h2>
+<ol>
+  <li>Information linked to an account is retained for as long as the account exists.</li>
+  <li>CookEye analysis sessions (item name and quantity) are deleted automatically after 24 hours.</li>
+  <li>Records of advertisements viewed are deleted automatically after 7 days.</li>
+  <li>Running &ldquo;My Page&rdquo; &rarr; &ldquo;Account Settings&rdquo; &rarr; &ldquo;Delete Account&rdquo; in the App deletes the user&rsquo;s data stored in the cloud. <strong>Deleted data cannot be restored.</strong></li>
+</ol>
+
+<h2>7. Your rights</h2>
+<p>Users may request the disclosure, correction, suspension of use, or deletion of their own information held by us. If you wish to make such a request, please contact us at the address at the foot of this page. After confirming your identity, we will respond within a reasonable period.</p>
+
+<h2>8. Use by children</h2>
+<p>The App is not intended for people under the age of 13. If a person under 13 uses the App, they should do so with the consent and supervision of a parent or guardian.</p>
+
+<h2>9. Changes to this Policy</h2>
+<p>We may change this Policy. If we make a significant change, we will give notice through an in-app announcement or by posting on this page.</p>
+
+<footer>
+  <p>Contact: <a href="mailto:meshinavi.support@gmail.com">meshinavi.support@gmail.com</a><br>
+  <a href="terms.html">Terms of Service</a> &middot; <a href="tokushoho.html">Notice under the Specified Commercial Transactions Act (Japanese)</a> &middot; <a href="index.html">Home</a></p>
+</footer>
+
+</div>
+
 </main>
+<script src="lang.js"></script>
 </body>
 </html>

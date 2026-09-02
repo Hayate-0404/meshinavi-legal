@@ -6,6 +6,12 @@
   --line: #e2e2e6;
   --accent: #d63b3b;
   --card: #f7f7f8;
+  /* 言語トグル（白黒） */
+  --toggle-track: #f2f2f4;
+  --toggle-border: #e2e2e6;
+  --toggle-fg: #6b6b70;
+  --toggle-active-bg: #1c1c1e;
+  --toggle-active-fg: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -15,6 +21,11 @@
     --line: #303034;
     --accent: #ff6b6b;
     --card: #1b1b1e;
+    --toggle-track: #232327;
+    --toggle-border: #37373c;
+    --toggle-fg: #9a9aa0;
+    --toggle-active-bg: #ececee;
+    --toggle-active-fg: #111113;
   }
 }
 * { box-sizing: border-box; }
@@ -70,4 +81,66 @@ footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line);
 }
 @media (prefers-color-scheme: dark) {
   .todo { background: #2e2412; color: #f0c479; border-color: #7a5a1e; }
+}
+
+/* --- 言語切り替え ------------------------------------------------------- */
+
+/* 日本語版と英語版を 1 ファイルに両方置き、<html lang> で出し分ける。
+   URL を増やさないのは、アプリのバイナリに規約の URL が焼き込まれていて
+   変えられないため（審査 3.1.2 が「機能するリンク」を要求する）。
+   JS が無効でも lang="ja" のまま日本語が出るので、白紙にはならない。 */
+.lang-block { display: none; }
+html[lang="ja"] .lang-block[data-lang="ja"] { display: block; }
+html[lang="en"] .lang-block[data-lang="en"] { display: block; }
+
+.lang-switch {
+  display: flex;
+  justify-content: flex-end;
+  padding: 28px 0 0;
+}
+.lang-block > header { padding-top: 24px; }
+
+.lang-toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: var(--toggle-track);
+  border: 1px solid var(--toggle-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.lang-toggle button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  min-width: 64px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--toggle-fg);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.lang-toggle button.is-active {
+  background: var(--toggle-active-bg);
+  color: var(--toggle-active-fg);
+}
+.lang-toggle button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+/* 訳文であることの断り書き。原文（日本語）が優先である旨を明示する。 */
+.translation-note {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 13px;
 }
