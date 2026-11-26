@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プライバシーポリシー | メシナビ</title>
+<title>プライバシーポリシー | めしなび</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-title-ja="プライバシーポリシー | メシナビ" data-title-en="Privacy Policy | Meshinavi">
+<body data-title-ja="プライバシーポリシー | めしなび" data-title-en="Privacy Policy | Meal Navi">
 <main>
 
 <div class="lang-switch">
@@ -20,11 +20,11 @@
 <div class="lang-block" data-lang="ja">
 
 <header>
-  <h1>メシナビ プライバシーポリシー</h1>
-  <p class="meta">制定日：2026年8月30日／改定日：2026年10月26日</p>
+  <h1>めしなび プライバシーポリシー</h1>
+  <p class="meta">制定日：2026年8月30日／改定日：2026年11月26日</p>
 </header>
 
-<p class="lead">Hayate Kosugi（以下「当方」）は、メシナビ（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
+<p class="lead">Hayate Kosugi（以下「当方」）は、めしなび（以下「本アプリ」）における利用者の情報の取り扱いについて、以下のとおり定めます。</p>
 
 
 <h2>1. 取得する情報</h2>
@@ -52,9 +52,14 @@
     <td>AI による献立の提案（詳細は「3.」）</td>
   </tr>
   <tr>
-    <td>クックアイの利用回数、広告視聴の記録</td>
+    <td>提案を受けるために選んだ条件（食事スタイル、食材、アレルギーなどで避けたい食材）</td>
+    <td>クックアイで食事スタイル・食材から提案を受けるとき</td>
+    <td>AI による献立の提案（詳細は「3.」）</td>
+  </tr>
+  <tr>
+    <td>クックアイのクレジットの使用状況、広告視聴の記録</td>
     <td>クックアイ・広告の利用時</td>
-    <td>プランごとの利用回数の管理、不正利用の防止</td>
+    <td>プランごとのクレジットの管理、不正利用の防止</td>
   </tr>
   <tr>
     <td>プッシュ通知トークン、OS バージョン、アプリバージョン、端末の種別</td>
@@ -81,15 +86,16 @@
 </div>
 
 <h2>2. 情報の保存場所</h2>
-<p>取得した情報は、Google LLC が提供する Firebase（Authentication / Cloud Firestore / Cloud Functions / Cloud Messaging）に保存されます。データの保存リージョンは日本（東京）です。</p>
+<p>取得した情報は、Google LLC が提供する Firebase（Authentication / Cloud Firestore / Cloud Storage / Cloud Functions / Cloud Messaging）に保存されます。データの保存リージョンは日本（東京）です。</p>
 
-<h2>3. クックアイ（AI解析）における画像の取り扱い</h2>
+<h2>3. クックアイ（AI解析）における画像と条件の取り扱い</h2>
 <p>本アプリの中心的な機能であるため、特に詳しく説明します。</p>
 <ol>
   <li>利用者が撮影した画像は、当方のサーバー（Cloud Functions）を経由して、<strong>Google LLC の生成 AI サービス（Gemini API）に送信されます。</strong></li>
   <li><strong>当方は、送信された画像を保存しません。</strong>解析が終わった時点で画像はサーバーから破棄されます。</li>
+  <li>食事スタイル・食材から提案を受ける場合は、画像の代わりに、利用者が選んだ条件（目的・食材・調理法、アレルギーなどで避けたい食材など）が同じ経路で Gemini API に送信されます。<strong>当方は、この条件を保存しません。</strong></li>
   <li>サーバーに記録されるのは、解析結果として認識された<strong>品目名と分量のみ</strong>です（「違う提案」を再度受け取るために必要なため）。この記録は<strong>24時間後に自動的に削除</strong>されます。</li>
-  <li>Google における画像の取り扱いは、同社の
+  <li>Google における画像や条件の取り扱いは、同社の
     <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 追加利用規約</a>に従います。当方は有料版の API を利用しており、送信されたデータが Google の生成 AI モデルの改善・学習に利用されることはありません。</li>
   <li>他人の顔や、個人を特定できる情報が写り込んだ画像の送信はお控えください。</li>
 </ol>
@@ -113,8 +119,8 @@
 <div class="scroll">
 <table>
   <tr><th>事業者</th><th>提供する情報</th><th>目的</th></tr>
-  <tr><td>Google LLC（Firebase）</td><td>アカウント情報、プロフィール、利用回数、通知トークン</td><td>認証・データ保存・通知配信</td></tr>
-  <tr><td>Google LLC（Gemini API）</td><td>クックアイに使用する画像</td><td>AI による解析</td></tr>
+  <tr><td>Google LLC（Firebase）</td><td>アカウント情報、プロフィール、クレジットの使用状況、通知トークン</td><td>認証・データ保存・通知配信</td></tr>
+  <tr><td>Google LLC（Gemini API）</td><td>クックアイに使用する画像、提案のために選んだ条件</td><td>AI による解析・提案</td></tr>
   <tr><td>Google LLC（AdMob）</td><td>広告識別子等</td><td>広告の配信・効果測定</td></tr>
   <tr><td>RevenueCat, Inc.</td><td>購入情報、アカウント ID</td><td>サブスクリプション状態の管理</td></tr>
   <tr><td>Apple Inc.</td><td>購入情報</td><td>App 内課金の処理</td></tr>
@@ -149,13 +155,13 @@
 <div class="lang-block" data-lang="en">
 
 <header>
-  <h1>Meshinavi Privacy Policy</h1>
-  <p class="meta">Effective date: August 30, 2026 / Last revised: October 26, 2026</p>
+  <h1>Meal Navi Privacy Policy</h1>
+  <p class="meta">Effective date: August 30, 2026 / Last revised: November 26, 2026</p>
 </header>
 
 <p class="translation-note">This English text is a reference translation provided for convenience. If it differs from the Japanese version, <a href="privacy.html?lang=ja">the Japanese version</a> prevails.</p>
 
-<p class="lead">Hayate Kosugi (&ldquo;we&rdquo; or &ldquo;us&rdquo;) sets out below how user information is handled in Meshinavi (the &ldquo;App&rdquo;).</p>
+<p class="lead">Hayate Kosugi (&ldquo;we&rdquo; or &ldquo;us&rdquo;) sets out below how user information is handled in Meal Navi (the &ldquo;App&rdquo;).</p>
 
 
 <h2>1. Information we collect</h2>
@@ -183,9 +189,14 @@
     <td>AI meal suggestions (see section 3 for details)</td>
   </tr>
   <tr>
-    <td>CookEye usage counts, records of advertisements viewed</td>
+    <td>The conditions you select to get suggestions (meal styles, ingredients, and ingredients to avoid because of allergies or other reasons)</td>
+    <td>When you get suggestions from meal styles or ingredients in CookEye</td>
+    <td>AI meal suggestions (see section 3 for details)</td>
+  </tr>
+  <tr>
+    <td>CookEye credit usage, records of advertisements viewed</td>
     <td>When you use CookEye and advertisements</td>
-    <td>Managing usage counts per plan; preventing abuse</td>
+    <td>Managing credits per plan; preventing abuse</td>
   </tr>
   <tr>
     <td>Push notification token, OS version, app version, device type</td>
@@ -212,15 +223,16 @@
 </div>
 
 <h2>2. Where information is stored</h2>
-<p>The information we collect is stored in Firebase (Authentication / Cloud Firestore / Cloud Functions / Cloud Messaging), provided by Google LLC. The data storage region is Japan (Tokyo).</p>
+<p>The information we collect is stored in Firebase (Authentication / Cloud Firestore / Cloud Storage / Cloud Functions / Cloud Messaging), provided by Google LLC. The data storage region is Japan (Tokyo).</p>
 
-<h2>3. How images are handled in CookEye (AI analysis)</h2>
+<h2>3. How images and conditions are handled in CookEye (AI analysis)</h2>
 <p>Because this is the central feature of the App, we explain it in particular detail.</p>
 <ol>
   <li>Photos taken by the user are sent through our server (Cloud Functions) to <strong>Google LLC&rsquo;s generative AI service (the Gemini API).</strong></li>
   <li><strong>We do not store the images that are sent.</strong> Images are discarded from the server once the analysis is complete.</li>
+  <li>When you get suggestions from meal styles or ingredients, the conditions you select (purpose, ingredients, cooking style, ingredients to avoid because of allergies or other reasons, and so on) are sent to the Gemini API by the same route instead of an image. <strong>We do not store these conditions.</strong></li>
   <li>What is recorded on the server is <strong>only the item name and quantity</strong> recognized as the analysis result (because they are needed to produce further suggestions with &ldquo;Other ideas&rdquo;). This record is <strong>deleted automatically after 24 hours</strong>.</li>
-  <li>Google&rsquo;s handling of images follows its
+  <li>Google&rsquo;s handling of images and conditions follows its
     <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a>. We use the paid tier of the API, and the data sent is not used to improve or train Google&rsquo;s generative AI models.</li>
   <li>Please refrain from sending images in which other people&rsquo;s faces, or information that could identify an individual, appear.</li>
 </ol>
@@ -244,8 +256,8 @@
 <div class="scroll">
 <table>
   <tr><th>Provider</th><th>Information provided</th><th>Purpose</th></tr>
-  <tr><td>Google LLC (Firebase)</td><td>Account information, profile, usage counts, notification tokens</td><td>Authentication, data storage, notification delivery</td></tr>
-  <tr><td>Google LLC (Gemini API)</td><td>Images used for CookEye</td><td>AI analysis</td></tr>
+  <tr><td>Google LLC (Firebase)</td><td>Account information, profile, credit usage, notification tokens</td><td>Authentication, data storage, notification delivery</td></tr>
+  <tr><td>Google LLC (Gemini API)</td><td>Images used for CookEye, conditions selected for suggestions</td><td>AI analysis and suggestions</td></tr>
   <tr><td>Google LLC (AdMob)</td><td>Advertising identifier and similar information</td><td>Delivering and measuring advertisements</td></tr>
   <tr><td>RevenueCat, Inc.</td><td>Purchase information, account ID</td><td>Managing subscription status</td></tr>
   <tr><td>Apple Inc.</td><td>Purchase information</td><td>Processing in-app purchases</td></tr>
